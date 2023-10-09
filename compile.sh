@@ -5,12 +5,13 @@ set -x
 
 # default value for argument
 TOP="${1:-gcd_tb}"
+STD="08"
 
 # compile everything
-cat sources.list | xargs -L1 ghdl -a
+cat sources.list | xargs -L1 ghdl -a --std=$STD
 
 # elaborate
-ghdl -e $TOP 
+ghdl -e --std=$STD $TOP 
 
 # execute
-ghdl -r $TOP --vcd=wave.vcd
+ghdl -r --std=$STD $TOP --vcd=wave.vcd
