@@ -23,6 +23,7 @@
 ./src/funcblocks/a_minus_b.vhd
 ./src/funcblocks/b_minus_a.vhd
 ./src/funcblocks/sel_a_not_b.vhd
+./src/funcblocks/sel_a_not_0.vhd
 ./src/examples/GCD.vhd
 ./src/examples/GCD_top.vhd
 ./src/examples/Fibonacci_tb.vhd
