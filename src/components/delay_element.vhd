@@ -4,8 +4,8 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-library  unisim;
-use  unisim.vcomponents.lut1;
+--library  unisim;
+--use  unisim.vcomponents.lut1;
 
 entity  delay_element  is
   generic(

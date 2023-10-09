@@ -5,7 +5,6 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use work.defs.all;
-use ieee.std_logic_unsigned.all;
 use ieee.numeric_std.all;
 
 entity join_reg_fork is

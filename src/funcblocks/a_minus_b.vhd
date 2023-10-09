@@ -5,7 +5,6 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use work.defs.all;
-use ieee.std_logic_unsigned.all;
 use ieee.numeric_std.all;
 
 entity a_minus_b is
@@ -41,7 +40,7 @@ begin
 
   a <= ab(DATA_WIDTH - 1 downto DATA_WIDTH/2);
   b <= ab(DATA_WIDTH/2 - 1 downto 0);
-  res <= a - b after ADDER_DELAY;   
+  res <= std_logic_vector(unsigned(a) - unsigned(b)) after ADDER_DELAY;   
   result <= res & b;
   
 end Behavioral;

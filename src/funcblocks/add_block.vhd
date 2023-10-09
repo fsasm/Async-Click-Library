@@ -5,7 +5,6 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use work.defs.all;
-use ieee.std_logic_unsigned.all;
 use ieee.numeric_std.all;
 
 entity add_block is
@@ -39,7 +38,7 @@ delay_req: entity work.delay_element
     z => out_req
   );
 
-outC_data <= inA_data + inB_data after ADDER_DELAY;
+outC_data <= std_logic_vector(unsigned(inA_data) + unsigned(inB_data)) after ADDER_DELAY;
 in_ack <= connect;
 connect <= out_ack;
 
