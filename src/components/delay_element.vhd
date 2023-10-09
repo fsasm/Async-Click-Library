@@ -16,14 +16,6 @@ entity  delay_element  is
 end  delay_element;
 
 architecture  lut of  delay_element  is
-  component  lut1
-    generic (
-      init  : bit_vector  := "10");
-    port (
-      I0    : in   std_ulogic;
-      O     : out  std_ulogic
-    );
-  end  component;
   -- Internal  signals.
   signal  s_connect : std_logic_vector(size  downto  0);
   -- signal constraints
@@ -43,7 +35,7 @@ begin
     attribute  rloc of  delay_lut : label  is "X0Y" & integer 'image(y_val(index) );
     
     begin
-      delay_lut: lut1
+      delay_lut: entity work.lut1
         generic  map(
           init => "10") --truth table
         port  map(
